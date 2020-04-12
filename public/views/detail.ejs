@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <link href="/assets/stylesheets/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="course-form">
+    <form id="searchByCourseID" method="POST" action="/courseDetails/searchByCourseID">
+      <label for="courseID">Search by your course ID:</label>
+      <input type="text" id="courseID" name="courseID">
+      <input type="submit" value="submit" />
+    </form>
+    <div class="main">
+    <table id="course">
+      <tr>
+        <th>Course ID</th>
+        <th>Course Title</th>
+        <th>Course Term</th>
+        <th>Course Instructor</th>
+      </tr>
+      <% for (var i = 0; i < data.length; i++) { %>
+      <tr>
+        <td><%= data[i].courseID %></td>
+        <td><%= data[i].courseTitle %></td>
+        <td><%= data[i].courseTerm %></td>
+        <td><%= data[i].courseInstructor %></td>
+      </tr>
+      <% } %>
+    </table>
+    <br/><br/><br/>
+    <div class="center">
+    <a class="button home" href="/">Home</a>
+    </div>
+  </div>
+ 
+  </div>
+  </div>
+</body>
+</body>
+
+</html>
